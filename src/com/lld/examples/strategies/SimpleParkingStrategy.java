@@ -13,7 +13,7 @@ public class SimpleParkingStrategy implements ParkingStrategy{
 	public ParkingSlot getNextFreeSlot(VehicleType type, ParkingLot parkingLot) {
 		List<ParkingSlot> freeSlots = parkingLot.getSlots().stream().filter(s->s.isFree()&&s.getParkingType()==type).toList();
 		if(freeSlots.isEmpty()) {
-			throw new ParkingSlotUnavailableException("Free Slots NOT FUOND !!");
+			throw new ParkingSlotUnavailableException(" Free Slots NOT FOUND !!");
 		}
 		return freeSlots.get(0);
 	}

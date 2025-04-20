@@ -52,10 +52,9 @@ public class ParkingSlot {
 			return -1;
 		}
 		long totalTime = System.currentTimeMillis() - getStartTime();
-		int totalHours = Math.max(1, (int)totalTime/(1000*60*60));
 		System.out.println("UNPARKING "+getParkedVehicle()+" Unparked from Slot Number: "+slotNumber);
-		int fee = feeStrategy.calculateParkingFee(totalHours);
-		System.out.println("Total Parking fee for "+totalHours+" hours is :"+fee);
+		int fee = feeStrategy.calculateParkingFee(totalTime);
+		System.out.println("Total Parking fee is :"+fee);
 		parkedVehicle = null;
 		startTime=0;
 		return fee;

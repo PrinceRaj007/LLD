@@ -19,7 +19,7 @@ public abstract class Vehicle {
 
 	@Override
 	public String toString() {
-		return "Vehicle [regNumber=" + regNumber + ", getType()=" + getType() + "]";
+		return "Vehicle [RegNumber=" + regNumber + ", Type=" + getType() + "]";
 	}
 	
 }
